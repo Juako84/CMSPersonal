@@ -9,28 +9,31 @@
 
     <link href="~/css/bootstrap-theme.css" rel="stylesheet" />
     <link href="~/css/StyleSheet1.css" rel="stylesheet" />
-    <script src="~/js/jquery-1.11.3.min.js"></script>
+    
 
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6247692/752844/css/fonts.css" />
 </head>
 <body>
-    <header>
-        @await Component.InvokeAsync(nameof(UserDetail))
-    </header>
-    <div class="container">
-        <partial name="_CookieConsentPartial" />
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
+    <div class="toolkit brand-home header-short">
+        <header>
+            @await Component.InvokeAsync(nameof(UserDetail))
+        </header>
         <div class="container">
-            &copy; 2019 - CMSPersonal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <partial name="_CookieConsentPartial" />
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
         </div>
-    </footer>
 
-    <script src="~/js/bootstrap.min.js"></script>
-    @RenderSection("Script", false)
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2019 - CMSPersonal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+
+        </div>
+        <script src="~/js/jquery-1.11.3.min.js"></script>
+        <script src="~/js/bootstrap.min.js"></script>
+        @RenderSection("Script", false)
 </body>
 </html>

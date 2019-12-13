@@ -65,7 +65,7 @@ namespace CMSPersonal.Components
         {
             //json has [] therore changed the below code accordingly
             var rootObject = JsonConvert.DeserializeObject<List<MenuJsonRoot>>(menu.Item);
-            string mainString = "<ul>";
+            string mainString = @"<ul class='nav navbar-nav'>"; 
 
             for (int i = 0; i < rootObject.Count; i++)
             {
@@ -107,7 +107,7 @@ namespace CMSPersonal.Components
 
         string CreateMenuItem(MenuJsonChild child)
         {
-            string childString = "<li><a href=\"" + child.slug + "\">" + child.name + "</a></li>";
+            string childString = "<li class='dropdown yamm-fw'><a href=\"" + child.slug + "\">" + child.name + "</a></li>";
             return childString;
         }
     }
