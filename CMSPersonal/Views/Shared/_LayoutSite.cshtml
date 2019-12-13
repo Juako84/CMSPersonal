@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@(((string[])ViewData["Meta"])[0])</title>
+    <meta name="keywords" content="@(((string[])ViewData["Meta"])[1])" />
+    <meta name="description" content="@(((string[])ViewData["Meta"])[2])" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <link href="~/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/css/StyleSheet1.css" rel="stylesheet" />
+    <script src="~/js/jquery-1.11.3.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6247692/752844/css/fonts.css" />
+</head>
+<body>
+    <div>
+        @*<div id="navbar-collapse-example" class="toolkit brand-home header-short navbar-collapse collapse">*@
+        <div class="toolkit brand-home header-short">
+            @await Component.InvokeAsync(nameof(SiteMenu))
+
+
+            <!-- Post Header-->
+            <!-- content -->
+            <div class="bg-light-gray">
+                @RenderBody()
+            </div>
+
+
+
+            <footer>
+                <br />
+                <div class="container flush-outside">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-3">
+                                    <h4>Acerca de GS1 Chile</h4>
+                                    <ul>
+                                        <li><a href="@Url.Action("Historia", "SobreGS1", new { title = "" })">Historia</a></li>
+                                        <li><a href="@Url.Action("Mision", "SobreGS1", new { title = "" })">Misión / Visión</a></li>
+                                        <li><a href="@Url.Action("Valores", "SobreGS1", new { title = "" })">Valores y Compromisos GS1</a></li>
+                                        <li><a href="@Url.Action("PoliticaCalidad", "SobreGS1", new { title = "" })">Política de Calidad</a></li>
+                                        <li><a href="@Url.Action("Directorio", "SobreGS1", new { title = "" })">Directorio</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3">
+                                    <h4><a href="@Url.Action("Index", "Contacto", new { title = "" })"> Contáctenos</a></h4>
+                                    @*<ul>
+                                            <li><a href="#0">Item 1</a></li>
+                                            <li><a href="#0">Item 2</a></li>
+                                            <li><a href="#0">Item 3</a></li>
+                                        </ul>*@
+                                </div>
+                                <div class="clearfix visible-sm"></div>
+                                <div class="col-xs-12 col-sm-6 col-md-3">
+                                    @*<h4>Soporte</h4>
+                                        <ul>
+                                            <li><a href="#0">Item 1</a></li>
+                                            <li><a href="#0">Item 2</a></li>
+                                            <li><a href="#0">Item 3</a></li>
+                                        </ul>*@
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="newsletter social">
+                                @*<a href="#0" class="icon icon-facebook"></a>*@
+                                <a href="https://twitter.com/gs1chile" target="_blank" class="icon icon-twitter"></a>
+                                @*<a href="https://cl.linkedin.com/pub/gs1-chile/52/3b5/139" target="_blank" class="icon icon-linkedin"></a>*@
+                                @*<a href="#0" class="icon icon-flickr"></a>*@
+                                <hr />
+                                <h4> Contáctenos:</h4>
+                                <p>Av. Vitacura 2771, piso 7, Las Condes, Santiago, Chile</p>
+                                <p>Teléfono: +56 2 3278 3500</p>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        @*<div class="col-xs-12 col-md-8 footer-links">
+                                <hr>
+                                <a href="#0">Términos de Uso</a>
+                                <span class="link-pipe">|</span>
+                                <a href="#0">Politicas de Privacidad</a>
+                            </div>*@
+                    </div>
+                    <div class="row">
+                        @*<div class="col-xs-12">
+                                GS1 Chile es una compañía limitada por garantía y registrada en GS1.org.
+
+                            </div>*@
+                    </div>
+                </div>
+
+            </footer>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+    <script src="~/js/bootstrap.min.js"></script>
+</body>
+</html>

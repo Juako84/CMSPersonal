@@ -1,0 +1,192 @@
+﻿@media (max-width: 767px) {
+      .row-heigth2 { 
+          min-height: 0px !important;
+      }
+
+    .row-heigth {
+        min-height: 0px !important;
+    }
+}
+
+.row-heigth {
+    min-height: 515px;
+    border-bottom: 1px solid #b1b3b3;
+    border-left: 1px solid #b1b3b3;
+    border-right: 1px solid #b1b3b3;
+}
+    .row-heigth .content-module,
+     .content-module-freeform {
+
+        border: none;
+        /*border-bottom: none;*/
+    }
+
+    .row-heigth2 {
+    /*min-height: 623px;*/
+    border-bottom: 1px solid #b1b3b3;
+    border-left: 1px solid #b1b3b3;
+    border-right: 1px solid #b1b3b3;
+}
+    .row-heigth2 .content-module,
+     .content-module-freeform {
+
+        border: none;
+        /*border-bottom: none;*/
+    }
+
+    .row-heigth2 
+    .text-margin {margin-top: 5px;margin-right: 5px;margin-left: 5px;margin-bottom: 5px;
+                      
+    }
+    
+.titleSelected{
+    background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0aD0iMXB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDEgOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMSA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHJlY3QgZmlsbD0iI0YyNjMzNCIgd2lkdGg9IjEiIGhlaWdodD0iOCIvPgo8L3N2Zz4=) repeat-x;
+}
+.titleSelected a[data-toggle="dropdown"] {color:#f26334!important;}
+
+.noticiadestacadaPortada {
+    /*border-bottom: 1px solid #f26334;margin: 5px 0px 0px 0px*/
+    border-bottom: 1px solid #b1b3b3;margin: 5px 0px 0px 0px
+}
+.noticiadestacadaPortada:last-child 
+{
+    border-bottom: none;
+}
+.noticiadestacadaPortada:first-child
+{
+     /*border-top: 1px solid #f26334;*/
+     border-top: 1px solid #b1b3b3;
+}
+    
+.moduloherramientas h4:last-child  { border: none}
+
+.fill { 
+    min-height: 100% !important;
+    height: 100% !important;
+}
+
+.row-full-height {
+  height: 100%;
+}
+.col-full-height {
+  height: 100%;
+  vertical-align: middle;
+}
+.row-same-height {
+  display: table;
+  width: 100%;
+    
+    
+  /* fix overflow */
+  table-layout: fixed;
+}
+.col-xs-height {
+  display: table-cell;
+  float: none !important;
+}
+@media (min-width: 768px) {
+  .col-sm-height {
+    display: table-cell;
+    float: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-height {
+    display: table-cell;
+    float: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-height {
+    display: table-cell;
+    float: none !important;
+  }
+}
+
+
+
+
+
+.rowPrueba {
+  display: table;
+}
+
+.colPrueba {
+  display: table-cell;
+  
+
+  padding: 1em;
+  border: solid;
+}
+
+.barraarriba{
+    padding-top: 1px;
+    background: #1C1F51;  
+    /*width: 700px;*/
+    height: 40px;
+    color: white;
+    font-weight: lighter;
+}
+.imagen01{
+    border-top: solid;
+    border-color: #E55526;
+    
+
+    
+    
+    
+}
+
+.imagen01 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.barraimagen{
+    background: #1C1F51;
+    color: white;
+    font-weight: lighter;
+    font-size: 11px;
+}
+
+.modal-dialog{text-align:center;}
+.modal-content{display:inline-block;}
+
+.modal-dialog{
+    position: relative;
+    display: table; /* This is important */ 
+    overflow-y: auto;    
+    overflow-x: auto;
+    width: auto;
+    min-width: 300px;
+  
+    
+}
+.toolkit .modal-body, .toolkit .modal-footer {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.modal-body {
+    position: relative;
+    padding: 0px;
+}
+
+#bannerpop {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 10000;
+	margin: 0px;
+	left: auto;
+top: 0px;
+	right: auto;
+	display: block;
+	background-image: url(https://www.cate.cl/images/bck.png);
+	padding-top: 50px;
+	padding-bottom: 200px;
+}
+
+
+

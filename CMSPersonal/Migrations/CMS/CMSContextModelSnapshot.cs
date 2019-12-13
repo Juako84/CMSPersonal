@@ -19,6 +19,100 @@ namespace CMSPersonal.Migrations.CMS
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("CMSPersonal.Models.Blog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("AddedOn")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime")
+                        .HasDefaultValueSql("(getdate())");
+
+                    b.Property<int>("CategoryId");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .IsUnicode(false);
+
+                    b.Property<string>("MetaDescription")
+                        .HasMaxLength(250)
+                        .IsUnicode(false);
+
+                    b.Property<string>("MetaKeyword")
+                        .HasMaxLength(250)
+                        .IsUnicode(false);
+
+                    b.Property<string>("MetaTitle")
+                        .HasMaxLength(250)
+                        .IsUnicode(false);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<int?>("PrimaryImageId");
+
+                    b.Property<bool>("Status");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Blog");
+                });
+
+            modelBuilder.Entity("CMSPersonal.Models.BlogCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("AddedOn")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime")
+                        .HasDefaultValueSql("(getdate())");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .IsUnicode(false);
+
+                    b.Property<string>("MetaDescription")
+                        .HasMaxLength(250)
+                        .IsUnicode(false);
+
+                    b.Property<string>("MetaKeyword")
+                        .HasMaxLength(250)
+                        .IsUnicode(false);
+
+                    b.Property<string>("MetaTitle")
+                        .HasMaxLength(250)
+                        .IsUnicode(false);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<int?>("ParentId");
+
+                    b.Property<bool>("Status");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BlogCategory");
+                });
+
             modelBuilder.Entity("CMSPersonal.Models.Media", b =>
                 {
                     b.Property<int>("Id")
@@ -85,6 +179,33 @@ namespace CMSPersonal.Migrations.CMS
                     b.HasKey("Id");
 
                     b.ToTable("Menu");
+                });
+
+            modelBuilder.Entity("CMSPersonal.Models.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("AddedOn")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime")
+                        .HasDefaultValueSql("(getdate())");
+
+                    b.Property<int>("CourseId");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<string>("ValidatedBy")
+                        .HasMaxLength(10)
+                        .IsUnicode(true);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Order");
                 });
 
             modelBuilder.Entity("CMSPersonal.Models.Page", b =>
